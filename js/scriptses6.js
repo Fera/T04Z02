@@ -80,11 +80,11 @@ ev.emit("custom"); // nic się nie wydarzy
 const db = new Database("db://localhost:3000"); // fikcyjny adres
 
 db.on("connect", url => {
-    console.log("Połączenie z bazą pod adresem ${url} zostało ustanowione.");
+    console.log(`Połączenie z bazą pod adresem ${url} zostało ustanowione.`);
 });
 
 db.on("disconnect", url => {
-    console.log("Połączenie z bazą pod adresem ${url} zostało zakończone.");
+    console.log(`Połączenie z bazą pod adresem ${url} zostało zakończone.`);
 });
 
 db.connect();
