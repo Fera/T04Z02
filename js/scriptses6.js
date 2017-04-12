@@ -60,11 +60,11 @@ class Database extends EventEmitter {
 const ev = new EventEmitter();
 
 ev.on("hello", message => {
-    console.log("Witaj " + message + "!");
+    console.log(`Witaj ${message}!`);
 });
 
 ev.on("hello", message => {
-    console.log("Siema " + message + ".");
+    console.log(`Siema ${message}.`);
 });
 
 ev.on("goodbye", () => {
@@ -80,11 +80,11 @@ ev.emit("custom"); // nic się nie wydarzy
 const db = new Database("db://localhost:3000"); // fikcyjny adres
 
 db.on("connect", url => {
-    console.log("Połączenie z bazą pod adresem " + url + " zostało ustanowione.");
+    console.log(`Połączenie z bazą pod adresem ${url} zostało ustanowione.`);
 });
 
 db.on("disconnect", url => {
-    console.log("Połączenie z bazą pod adresem " + url + " zostało zakończone.");
+    console.log(`Połączenie z bazą pod adresem ${url} zostało zakończone.`);
 });
 
 db.connect();
